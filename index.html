@@ -3,15 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gianna's Site</title>
+    <title>Gianna's Site || About Me</title>
+
+    <style> 
+        body {
+            background-color: Gainsboro;
+        }
+
+        .root-title {
+        text-align: center;
+        }
+
+        hr {
+            border: 1px solid grey;
+            height: 3px;
+            color: grey;  
+            width: 50%;  
+            background-color: grey;
+        }
+
+        .root-content {
+            border: 6px solid grey;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+            width: 70%;
+           
+        }
+
+        .content-title {
+            text-align: left;
+            font-style: Georgia;
+            font-size: 30px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid grey;
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+
     
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    
 </head>
-<body>
-    <h1>Yo it's Gianna, this is the root page!</h1>
+<body class="root-page">
+    <!-- Header section -->
+    <header>
+        <h1 class="root-title">Gianna Dixon</h1>
+        <img src="https://i.ebayimg.com/images/g/AOAAAOSwtOVlEkiy/s-l1200.jpg" alt="batman" width="300" height="400">
+    </header> 
+    <hr>
+    <!-- Used div here to contain main conent and to customize it -->
+    <div class="root-content">
+        <h2 class="content-title">About Me</h2>
+    
+        <p>Hi, my name is Gianna Dixon, a junior in college. My major is computer science, and my concentration is software engineering. My current minor is French, but I am working to get it changed to computer engineering.</p>
+        <p>I really like to go outside to take walkings, I watch anime, play games here and there and love listening to music.</p> 
 
-    <a href="itis3135/index.html">Click here to go to ITIS 3135</a>
-     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    </div> 
+
+
+    <!-- Footer section -->
+    <footer>
+        <a href="itis3135/index.html">Click here to go to ITIS 3135</a>
+        <p>Page created by Gianna Dixon</p>
+    </footer>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
