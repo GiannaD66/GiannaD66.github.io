@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Anime | What Is Japanese Anime?</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <style>
+        /* This stylesheet uses element selectors only. There are no class or id selectors,
+           and the page has no div or span elements, so nothing here needs a justification. */
+
+        :root {
+            --ink: #1d1d21;          /* very dark charcoal, used for body text */
+            --charcoal: #2b2b30;     /* dark panels and link color */
+            --slate: #5c5c63;        /* muted grey text */
+            --stone: #d9d5d1;        /* warm light grey */
+            --paper: #f5f2ef;        /* warm light page color and light text */
+            --card: #fffdfb;         /* soft warm cards */
+            --crimson: #a61d2a;      /* main red */
+            --crimson-dark: #7e1520; /* hover red */
+        }
+
+        body {
+            margin: 0;
+            padding: 1.5rem 1rem 3rem;
+            background-color: var(--paper);
+            background-image: radial-gradient(circle at top, var(--card) 0%, var(--paper) 55%, var(--stone) 100%);
+            background-attachment: fixed;
+            color: var(--ink);
+            font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header, main, and footer share one centered column */
+        header, main, footer {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Links use the dark charcoal color, and visited links match the normal color */
+        a {
+            color: var(--charcoal);
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: var(--charcoal);
+        }
+
+        a:hover {
+            text-decoration-thickness: 3px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: var(--charcoal);
+            background-image: linear-gradient(135deg, var(--ink) 0%, var(--charcoal) 100%);
+            color: var(--paper);
+            /* A table display shrinks the box to fit the text and centers it, so no width is needed */
+            display: table;
+            margin: 0 auto;
+            padding: 0.4rem 1.5rem;
+            /* Second font: a serif for headings, paired with the sans-serif body font above */
+            font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+            font-size: clamp(1.75rem, 6vw, 2.5rem);
+            letter-spacing: 0.04em;
+            border-radius: 10px;
+            border-bottom: 5px solid var(--crimson);
+            box-shadow: 0 6px 16px rgba(29, 29, 33, 0.3);
+        }
+
+
+
+        /* The nav links act as the page tabs */
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 1.5rem auto;
+        }
+
+        nav a {
+            padding: 0.6rem 1.2rem;
+            border: 2px solid var(--charcoal);
+            border-radius: 6px;
+            background-color: var(--card);
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.15s ease, transform 0.15s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--stone);
+            transform: translateY(-2px);
+        }
+
+        nav a[aria-current="page"],
+        nav a[aria-current="page"]:visited {
+            background-color: var(--crimson);
+            border-color: var(--crimson);
+            color: var(--paper);
+            box-shadow: 0 3px 8px rgba(166, 29, 42, 0.4);
+        }
+
+        nav a[aria-current="page"]:hover {
+            background-color: var(--crimson-dark);
+            border-color: var(--crimson-dark);
+        }
+
+        nav a:focus-visible {
+            outline: 3px solid var(--ink);
+            outline-offset: 2px;
+        }
+
+        section {
+            background-color: var(--card);
+            border-left: 6px solid var(--crimson);
+            border-radius: 10px;
+            padding: 1rem 1.5rem 1.5rem;
+            box-shadow: 0 4px 14px rgba(29, 29, 33, 0.12);
+        }
+
+        /* Every h2 lives inside a section, so this one unqualified rule styles them all */
+        h2 {
+            font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+            color: var(--crimson);
+            margin-top: 0.5rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--stone);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid var(--charcoal);
+        }
+
+        figure {
+            margin: 1.25rem 0 0;
+        }
+
+        figcaption {
+            margin-top: 0.4rem;
+            color: var(--slate);
+            font-size: 0.9rem;
+        }
+
+        figcaption em {
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--stone);
+            color: var(--slate);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.5rem 2rem;
+            }
+
+            section {
+                padding: 0.5rem 1rem 1rem;
+            }
+        }
+    </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!-- Header with site title and navigation -->
+    <header>
+        <h1>Japanese Anime</h1>
+
+        <nav aria-label="Page sections">
+            <a href="#what" aria-current="page">What</a>
+            <a href="#who">Who</a>
+            <a href="#where">Where</a>
+            <a href="#when">When</a>
+            <a href="#why">Why</a>
+            <a href="#how">How</a>
+            <a href="#ai-prompts">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- What Section -->
+        <section id="what">
+            <h2>What Is Japanese Anime?</h2>
+            <p>Japanese anime is a style of animation that originated in Japan and is characterized by its distinctive art style, vibrant colors, and dynamic action sequences.</p>
+            <p>I think that japan does a better job at creating unique and engaging storylines than other countries.</p>
+            <figure>
+                <img src="https://media.thepopverse.com/media/demonslayer_lpkizlj-vjmc232ppc5ehh0gpvrfk40sdq.jpg" alt="Anime Graphics">
+                <figcaption>Anime Graphics<br><em>Source: The Pop Verse (thepopverse.com)</em></figcaption>
+            </figure>
+        </section>
+        <!-- Who Section -->
+        <section id="who" hidden>
+            <h2>About Me</h2>
+            <p>I was first introduced to anime when I was a child. My cousins told me to watch naruto.</p>
+            <p>It was my very first anime that I finished and it was a very great anime. I got hooked onto watching even more anime after that.</p>
+            <figure>
+                <img src="https://i.redd.it/3b90sa7a5iu71.jpg" alt="Naruto vs Sasuke">
+                <figcaption>Naruto vs Sasuke<br><em>Source: Reddit (reddit.com)</em></figcaption>
+            </figure>
+        </section>
+        <!-- Where Section -->
+        <section id="where" hidden>
+            <h2>Where to Watch Anime</h2>
+            <p>There are a lot of streaming services to watch anime from. I mainly use Crunchyroll and Netflix to watch anime. I also sometimes use websites that I find online.</p>
+            <p>I don't recommend finding other sources online because they can easily give you problems.</p>
+            <figure>
+                <img src="https://a.storyblok.com/f/178900/1500x2000/32e7be7478/cr-7.jpg/m/filters:quality(95)format(webp)" alt="Crunchyroll">
+                <figcaption>Crunchyroll<br><em>Source: Crunchyroll</em></figcaption>
+            </figure>
+        </section>
+        <!-- When Section -->
+        <section id="when" hidden>
+            <h2>When to Watch Anime</h2>
+            <p>Anime can be watched at any time of the day. Back in quarantine, I would watch anime literally all day long. I even watched it all night before.</p>
+            <p>I will say, watching sad or emotional animes at night is the way to go.</p>
+            <figure>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMm_dpkxmcbRgE4L34rw_nEkaIR-oEgPUfKNV-cm7NiCClB8xx_gA0Upgl&s=10" alt="Anime at Night">
+                <figcaption>Anime at Night<br><em>Source: Google Images</em></figcaption>
+            </figure>
+        </section>
+        <!-- Why Section -->
+        <section id="why" hidden>
+            <h2>Why Watch Anime?</h2>
+            <p>Watching anime can be a great way to relax and unwind after a long day. It also allows you to explore different cultures and perspectives through the stories and characters.</p>
+            <p>It also portrays a lot of animation and art styles that you don't usually see in other shows.</p>
+            <figure>
+                <img src="https://www.indoneo.com/wp-content/uploads/2026/06/young-people-streaming-anime-east-asian-apartment-indoneo-78055-1200x675.jpg" alt="People watching Anime">
+                <figcaption>People Watching Anime<br><em>Source: Indoneo (indoneo.com)</em></figcaption>
+            </figure>
+        </section>
+        <!-- How Section -->
+        <section id="how" hidden>
+            <h2>How Anime Has Impacted Me</h2>
+            <p>Anime has had a significant impact on my life. I was hooked every since I watch naruto for the first time. </p>
+            <p>It has been one of my favorite ways to spend my free time ever since.</p>
+            <figure>
+                <img src="https://i.pinimg.com/736x/29/e4/59/29e45936eba92a2e60bf941c9afab69c.jpg" alt="Ichigo Yelling">
+                <figcaption>Ichigo Yelling<br><em>Source: Pinterest (pinterest.com)</em></figcaption>
+            </figure>
+        </section>
+        <!-- AI Prompts Section -->
+        <section id="ai-prompts" hidden>
+            <h2>AI Prompts</h2>
+            <p>I am making a website for a class. I want to mainly use grey, white, and black, but I also want it to pop a little bit. What are some colors that can go together?</p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Design Firm (though i didnt do this yet, will in the future) -->
+        <p>&copy; 2026 Gianna Dixon. Site designed by <a href="_blank">Your Design Firm</a>.</p>
+    </footer>
+
+    <script>
+        const siteName = document.querySelector("h1").textContent.trim();
+        const links = Array.from(document.querySelectorAll("nav a"));
+        const panels = links.map((link) => document.getElementById(link.getAttribute("href").slice(1)));
+
+        // Show one section, hide the rest, and update the tab title to "Site Name | Section Heading"
+        function showSection(selectedLink) {
+            links.forEach((link, index) => {
+                const isSelected = link === selectedLink;
+                if (isSelected) {
+                    link.setAttribute("aria-current", "page");
+                    document.title = siteName + " | " + panels[index].querySelector("h2").textContent.trim();
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+                panels[index].hidden = !isSelected;
+            });
+        }
+
+        links.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                showSection(link);
+                history.replaceState(null, "", link.getAttribute("href"));
+            });
+        });
+
+        // Open the section named in the address bar (or the first one) and follow manual hash changes
+        function showFromHash() {
+            const match = links.find((link) => link.getAttribute("href") === location.hash);
+            showSection(match || links[0]);
+        }
+
+        window.addEventListener("hashchange", showFromHash);
+        showFromHash();
+    </script>
+
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
